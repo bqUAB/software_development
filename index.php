@@ -4,7 +4,7 @@
 	require_once './include/login.php';
 	$conn = new mysqli($ServerName, $UserName, $Password, $DataBase);
 	if ($conn->connect_error) die($conn->connect_error);
-	echo "Prueba Conexion" . '<br>';
+	echo "PRUEBA" . '<br>';
 	
 	//select all information from table
 	$query = "select * from t_clothe";
@@ -18,7 +18,7 @@
 	{
 		$result->data_seek($j);
 		$row = $result->fetch_array(MYSQLI_ASSOC);
-		echo $row['id_clothe'].' '. $row['clothe_image'] . '<br>';
+		echo $row['id_clothe'].'<img src='. $row['clothe_image'] . '><br>';
 	}
 
 	$result->close();
@@ -28,5 +28,6 @@
 	
 	//$result2->close();
 	$conn->close();
+	
 
 ?>  	
