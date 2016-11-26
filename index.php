@@ -15,7 +15,8 @@
      	</label>
    		<div>You chose {{my}}</div>
  	</div>
- 
+ <div>
+ </div>
  	<div ng-app="myModule" ng-controller="myController">
 			{{ message }}
 		</div>
