@@ -21,11 +21,11 @@ function resize_pic($source_url, $destination_url, $quality) {
 	// The File
 	$filename = $source_url;
 	echo "Filename: $filename<br>";
-	$percent = $quality;
+	$percent = $quality;
 	
 	// Get new dimensions
 	list($width, $height) = getimagesize($filename);
-	$new_width = $width * $percent;
+	$new_width = $width * $percent;
 	$new_height = $height * $percent;
 	
 	// Resample
