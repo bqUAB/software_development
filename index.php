@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html ng-app>
-  <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  </head>
-  <body>
-  	<label>Name:</label>
-	<input type="text" ng-model="yourName" placeholder="Enter a name here">
-	<hr>
-	<h1>Hello {{yourName}}!</h1>
-	<hr>
-	<form enctype="multipart/form-data" name="cloth" method="POST" action="include/picture_saving.php">
-	  	<p>Tomar una foto</p>
-	  	<input type="file" accept="image/*" name="test_pic">
-	  	<input type="submit" value="Upload">
-	  	
-	</form>
-  </body>
-</html>
+
+<?php //Call login.php file 
+	//Call login.php file and connect to database
+	require_once './include/login.php';
+	$conn = new mysqli($ServerName, $UserName, $Password, $DataBase);
+	if ($conn->connect_error) die($conn->connect_error);
+	echo "Prueba Conexion" . '<br>';
+	
+	//select all information from table
+	$query = "select * from t_clothe";
+	$result = $conn->query($query);
+	if (!$result) die($conn->error);
+	
+	//show result from query
+	$rows = $result->num_rows;
+	
+	for ($j = 0; $j < $rows; ++$j)
+	{
+		$result->data_seek($j);
+		$row = $result->fetch_array(MYSQLI_ASSOC);
+		echo $row['id_clothe'].' '. $row['clothe_image'] . '<br>';
+	}
+
+	$result->close();
+	
+	$query2 = "INSERT INTO `t_clothe` (`id_clothe`, `id_clothe_style`, `id_color`, `id_brand`, `id_sex`, `id_age`, `clothe_image`) VALUES ('6', '6', '6', '6', '6', '6', 'INSERT TEST,  PHP')";
+	$result2 = $conn->query($query2);
+	
+	//$result2->close();
+	$conn->close();
+
+?>  	
