@@ -11,10 +11,16 @@
 	
 	<div>
 	
-	<button type="submit" id="M" onclick="reply_click(this.id)"><img src="include/images/Men.png" style="width:200px; height:300px"></button>
-	<button type="submit" id="U" onclick="reply_click(this.id)"><img src="include/images/Unisex.png" style="width:200px; height:300px"></button>
-	<button type="submit" id="W" onclick="reply_click(this.id)"><img src="include/images/Woman.png" style="width:200px; height:300px"></button>
+	<button type="submit" id="M" onclick="reply_click(this.id);document.getElementById('M').disabled=true;document.getElementById('U').disabled=false;document.getElementById('W').disabled=false">
+	<img src="include/images/Men.png" style="width:200px; height:300px"></button>
+	<button type="submit" id="U" onclick="reply_click(this.id);document.getElementById('M').disabled=false;document.getElementById('U').disabled=true;document.getElementById('W').disabled=false">
+	<img src="include/images/Unisex.png" style="width:200px; height:300px"></button>
+	<button type="submit" id="W" onclick="reply_click(this.id);document.getElementById('M').disabled=false;document.getElementById('U').disabled=false;document.getElementById('W').disabled=true">
+	<img src="include/images/Woman.png" style="width:200px; height:300px"></button>
 
+<button onclick="document.getElementById('up7913').disabled=true;document.getElementById('down7913').disabled=false;" type="submit" name="up7913" id="up7913">First</button>
+
+<button onclick="this.disabled=true;document.getElementById('up7913').disabled=false;" type="submit" name="down7913" id="down7913">Second</button>
 	<script type="text/javascript">
 	function reply_click(clicked_id)
 	{
