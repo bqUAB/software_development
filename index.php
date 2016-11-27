@@ -10,25 +10,60 @@
 	<body>
 	
 	<div>
-	
-	<button type="submit" id="M" onclick="reply_click(this.id);document.getElementById('M').disabled=true;document.getElementById('U').disabled=false;document.getElementById('W').disabled=false">
+
+	<button type="submit" id="M" class="btn-clear" onclick="reply_click(this.id);document.getElementById('M').disabled=true;document.getElementById('U').disabled=false;document.getElementById('W').disabled=false">
 	<img src="include/images/Men.png" style="width:200px; height:300px"></button>
 	<button type="submit" id="U" onclick="reply_click(this.id);document.getElementById('M').disabled=false;document.getElementById('U').disabled=true;document.getElementById('W').disabled=false">
 	<img src="include/images/Unisex.png" style="width:200px; height:300px"></button>
 	<button type="submit" id="W" onclick="reply_click(this.id);document.getElementById('M').disabled=false;document.getElementById('U').disabled=false;document.getElementById('W').disabled=true">
 	<img src="include/images/Woman.png" style="width:200px; height:300px"></button>
 
-<button onclick="document.getElementById('up7913').disabled=true;document.getElementById('down7913').disabled=false;" type="submit" name="up7913" id="up7913">First</button>
-
-<button onclick="this.disabled=true;document.getElementById('up7913').disabled=false;" type="submit" name="down7913" id="down7913">Second</button>
 	<script type="text/javascript">
 	function reply_click(clicked_id)
 	{
 		var id=clicked_id;
     	alert(id);
+    	
 	}
 	</script>
 	
+	<h2>Examples</h2>
+	
+<style>
+    .btn-weather{
+        transition: opacity 0.5s;
+    }
+    .btn-faded{
+        opacity: 0.5;
+    }
+</style>
+	<button id="Men" class="btn-weather"><image src="include/images/Men.png" style="width:200px; height:300px"/></button>
+	<button id="Unisex" class="btn-weather"><image src="include/images/Unisex.png" style="width:200px; height:300px"/></button>
+	<button id="Women" class="btn-weather"><image src="include/images/Woman.png" style="width:200px; height:300px"/></button>
+<script>
+    $(document).ready(function() {
+        $('#Men').click(function() {
+            $(this).removeClass('btn-faded');
+            $('#Unisex').addClass('btn-faded');
+            $('#Women').addClass('btn-faded');
+        });
+        $('#Unisex').click(function() {
+            $(this).removeClass('btn-faded');
+            $('#Men').addClass('btn-faded');
+            $('#Women').addClass('btn-faded');
+        });
+        $('#Women').click(function() {
+            $(this).removeClass('btn-faded');
+            $('#Men').addClass('btn-faded');
+            $('#Unisex').addClass('btn-faded');  
+        }); 
+    });
+</script>
+	
+	
+	<button onclick="document.getElementById('up7913').disabled=true;document.getElementById('down7913').disabled=false;" type="submit" name="up7913" id="up7913">First</button>
+
+	<button onclick="this.disabled=true;document.getElementById('up7913').disabled=false;" type="submit" name="down7913" id="down7913">Second</button>
 	<div  ng-controller="ExampleController">
 		
 		<h2>Which is your favorite?</h2>
