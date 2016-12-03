@@ -1,12 +1,15 @@
-<?php 
-//require_once 'functions.php';
-$uploaddir = '../images/';
-$uploadpic = $uploaddir . basename($_FILES['test_pic']['name']);
+<?php
+/** PHP 7.1 */
 
-if (move_uploaded_file($_FILES['test_pic']['tmp_name'], $uploadpic)) {
-	echo "File is valid, and was successfully uploaded.<br>";
+// require_once 'functions.php'; */
+
+$up_dir = '../img/';
+$up_pic = $up_dir . basename($_FILES['test_pic']['name']);
+
+if (move_uploaded_file($_FILES['test_pic']['tmp_name'], $up_pic)) {
+    echo "File is valid, and was successfully uploaded.<br>";
 } else {
-	echo "Possible file upload attack!<br>";
+    echo "Possible file upload attack!<br>";
 }
 
 echo "Here is some more debugging info:<br>";
@@ -16,4 +19,4 @@ print_r($_FILES);
 print "</pre>";
 ?>
 <br>
-<img src='<?php echo $uploadpic ?>' width="200px">
+<img src='<?php echo $up_pic ?>' width="200px">
