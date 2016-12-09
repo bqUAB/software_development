@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html ng-app>
   <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   </head>
   <body>
   	<label>Name:</label>
@@ -14,5 +15,7 @@
 	  	<input type="file" accept="image/*" name="test_pic">
 	  	<input type="submit" value="Upload">
 	</form>
+    <br>
+    <?php require_once './include/tests.php';?>
   </body>
 </html>
