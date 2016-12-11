@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2016 a las 16:11:06
+-- Tiempo de generación: 11-12-2016 a las 18:54:29
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 7.0.13
 
@@ -38,7 +38,8 @@ CREATE TABLE `t_test` (
 
 INSERT INTO `t_test` (`id`, `img_path`, `img_name`) VALUES
 (1, './img/', 'shoes.jpg'),
-(2, './img/', 'shirt.jpg');
+(2, './img/', 'shirt.jpg'),
+(3, './img/', 'jeans.JPG');
 
 --
 -- Índices para tablas volcadas
@@ -58,7 +59,7 @@ ALTER TABLE `t_test`
 -- AUTO_INCREMENT de la tabla `t_test`
 --
 ALTER TABLE `t_test`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
