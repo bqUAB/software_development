@@ -5,10 +5,11 @@
  * @param $quality
  * @return mixed
  */
+/*
 function compress_pic($source_url, $destination_url, $quality)
 {
     /** @var TYPE_NAME $info */
-    $info = getimagesize($source_url);
+    /*$info = getimagesize($source_url);
 
     if ($info['mime'] == 'image/jpeg')
         $image = imagecreatefromjpeg($source_url);
@@ -22,8 +23,10 @@ function compress_pic($source_url, $destination_url, $quality)
     imagejpeg($image, $destination_url, $quality);
     return $destination_url;
 }
+    */
 
-/*// Not working
+// Not working
+/*
 function resize_pic($source_url, $destination_url, $quality) {
 	// The File
 	$filename = $source_url;
