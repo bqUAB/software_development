@@ -1,2 +1,1 @@
-<?php // This file is used to test working codes from the internet
-?>
+<?php // This file is used to test working codes
