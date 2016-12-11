@@ -16,6 +16,6 @@
 	  	<input type="submit" value="Upload">
 	</form>
     <br>
-    <?php require_once './include/tests.php';?>
+    <?php require_once './include/show_img.php';?>
   </body>
 </html>

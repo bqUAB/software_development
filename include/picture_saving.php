@@ -17,6 +17,8 @@ echo "<pre>";
 print_r($_FILES);
 
 print "</pre>";
+
 ?>
 <br>
 <img src='<?php echo $up_pic ?>' width="200px">
+<br>
