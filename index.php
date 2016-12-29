@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
 
 	<body>
-	
+
 	<div>
 
 	<button type="submit" id="M" class="btn-clear" onclick="reply_click(this.id);document.getElementById('M').disabled=true;document.getElementById('U').disabled=false;document.getElementById('W').disabled=false">
@@ -29,7 +29,7 @@
 	
 	<h2>Examples</h2>
 	
-<style>
+<style >
     .btn-weather{
         transition: opacity 0.5s;
     }
