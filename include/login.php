@@ -5,10 +5,10 @@
  * Date: 10/12/2016
  * Time: 21:15
  */
-$ServerName = 'localhost';
+$ServerName = '192.168.0.104';
 
-$UserName = 'usr_admin_warehouse';
+$UserName = 'Ali';
 
-$Password = 'warehouse_admin';
+$Password = '12345';
 
-$DataBase = 'db_warehouse_test';
+$DataBase = 'db_warehouse';
